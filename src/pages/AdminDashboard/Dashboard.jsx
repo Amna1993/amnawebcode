@@ -11,9 +11,9 @@ import "chart.js/auto";
 
 function AdminDashboard() {
   const [notifications, setNotifications] = useState([
-    "New client signed up: John Doe",
+    "New client signed up: Cheeko",
     "Project 'E-commerce Website' moved to Development Phase",
-    "Payment received: $1500 from Jane Smith",
+    "Payment received: $1500 from Cheeko",
   ]);
 
   const barData = {

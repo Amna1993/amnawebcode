@@ -4,7 +4,6 @@ import {
   FiFolder,
   FiDollarSign,
   FiBell,
- 
 } from "react-icons/fi";
 import { Bar, Pie } from "react-chartjs-2";
 import "chart.js/auto";
@@ -35,9 +34,9 @@ function AdminDashboard() {
       {
         data: [12, 8, 5],
         backgroundColor: [
-          "rgba(191, 223, 14, 0.7)", // Blue
+          "rgba(191, 223, 14, 0.7)", // Yellow
           "rgba(34, 197, 94, 0.7)", // Green
-          "rgba(130, 15, 15, 0.7)", // Pink
+          "rgba(130, 15, 15, 0.7)", // Red
         ],
         hoverOffset: 4,
       },
@@ -45,49 +44,53 @@ function AdminDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-8">
-      <h1 className="text-4xl font-bold text-white mb-6 text-center">Admin Dashboard</h1>
+    <div className="min-h-screen bg-gray-900 text-white p-4 sm:p-8">
+      <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 text-center">
+        Admin Dashboard
+      </h1>
 
       {/* Dashboard Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-gray-800 shadow-md rounded-lg p-6 flex items-center gap-4 hover:bg-gray-700 transition">
-          <FiFolder className="text-blue-400 text-4xl" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="bg-gray-800 shadow-md rounded-lg p-4 sm:p-6 flex items-center gap-4 hover:bg-gray-700 transition">
+          <FiFolder className="text-blue-400 text-3xl sm:text-4xl" />
           <div>
-            <h2 className="text-2xl font-bold">0</h2>
-            <p className="text-gray-400">Active Projects</p>
+            <h2 className="text-xl sm:text-2xl font-bold">0</h2>
+            <p className="text-gray-400 text-sm sm:text-base">Active Projects</p>
           </div>
         </div>
-        <div className="bg-gray-800 shadow-md rounded-lg p-6 flex items-center gap-4 hover:bg-gray-700 transition">
-          <FiUsers className="text-green-400 text-4xl" />
+        <div className="bg-gray-800 shadow-md rounded-lg p-4 sm:p-6 flex items-center gap-4 hover:bg-gray-700 transition">
+          <FiUsers className="text-green-400 text-3xl sm:text-4xl" />
           <div>
-            <h2 className="text-2xl font-bold">0</h2>
-            <p className="text-gray-400">Active Clients</p>
+            <h2 className="text-xl sm:text-2xl font-bold">0</h2>
+            <p className="text-gray-400 text-sm sm:text-base">Active Clients</p>
           </div>
         </div>
-        <div className="bg-gray-800 shadow-md rounded-lg p-6 flex items-center gap-4 hover:bg-gray-700 transition">
-          <FiDollarSign className="text-yellow-400 text-4xl" />
+        <div className="bg-gray-800 shadow-md rounded-lg p-4 sm:p-6 flex items-center gap-4 hover:bg-gray-700 transition">
+          <FiDollarSign className="text-yellow-400 text-3xl sm:text-4xl" />
           <div>
-            <h2 className="text-2xl font-bold">$000000</h2>
-            <p className="text-gray-400">Total Revenue</p>
+            <h2 className="text-xl sm:text-2xl font-bold">$000000</h2>
+            <p className="text-gray-400 text-sm sm:text-base">Total Revenue</p>
           </div>
         </div>
-        <div className="bg-gray-800 shadow-md rounded-lg p-6 flex items-center gap-4 hover:bg-gray-700 transition">
-          <FiBell className="text-red-400 text-4xl" />
+        <div className="bg-gray-800 shadow-md rounded-lg p-4 sm:p-6 flex items-center gap-4 hover:bg-gray-700 transition">
+          <FiBell className="text-red-400 text-3xl sm:text-4xl" />
           <div>
-            <h2 className="text-2xl font-bold">0</h2>
-            <p className="text-gray-400">New Notifications</p>
+            <h2 className="text-xl sm:text-2xl font-bold">0</h2>
+            <p className="text-gray-400 text-sm sm:text-base">New Notifications</p>
           </div>
         </div>
       </div>
 
       {/* Analytics */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-        <div className="bg-gray-800 shadow-md rounded-lg p-6">
-          <h2 className="text-2xl font-semibold text-blue-400 mb-4">Revenue Trends</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mt-6">
+        <div className="bg-gray-800 shadow-md rounded-lg p-4 sm:p-6">
+          <h2 className="text-xl sm:text-2xl font-semibold text-blue-400 mb-4">
+            Revenue Trends
+          </h2>
           <Bar data={barData} />
         </div>
-        <div className="bg-gray-800 shadow-md rounded-lg p-6">
-          <h2 className="text-2xl font-semibold text-pink-400 mb-4">
+        <div className="bg-gray-800 shadow-md rounded-lg p-4 sm:p-6">
+          <h2 className="text-xl sm:text-2xl font-semibold text-pink-400 mb-4">
             Project Status Distribution
           </h2>
           <Pie data={pieData} />
@@ -95,13 +98,15 @@ function AdminDashboard() {
       </div>
 
       {/* Notifications */}
-      <div className="bg-gray-800 shadow-md rounded-lg p-6 mt-6">
-        <h2 className="text-2xl font-semibold text-yellow-400 mb-4">Notifications</h2>
+      <div className="bg-gray-800 shadow-md rounded-lg p-4 sm:p-6 mt-6">
+        <h2 className="text-xl sm:text-2xl font-semibold text-yellow-400 mb-4">
+          Notifications
+        </h2>
         <ul className="space-y-3">
           {notifications.map((note, index) => (
             <li
               key={index}
-              className="p-3 bg-gray-700 rounded-lg border border-gray-600"
+              className="p-3 bg-gray-700 rounded-lg border border-gray-600 text-sm sm:text-base"
             >
               {note}
             </li>
@@ -110,11 +115,11 @@ function AdminDashboard() {
       </div>
 
       {/* Client Management */}
-      <div className="bg-gray-800 shadow-md rounded-lg p-6 mt-6">
-        <h2 className="text-2xl font-semibold text-green-400 mb-4">
+      <div className="bg-gray-800 shadow-md rounded-lg p-4 sm:p-6 mt-6">
+        <h2 className="text-xl sm:text-2xl font-semibold text-green-400 mb-4">
           Active Clients
         </h2>
-        <table className="w-full border border-gray-600 text-left text-gray-300">
+        <table className="w-full border border-gray-600 text-left text-gray-300 text-sm sm:text-base">
           <thead className="bg-gray-700 text-gray-400">
             <tr>
               <th className="p-3 border-b border-gray-600">Name</th>

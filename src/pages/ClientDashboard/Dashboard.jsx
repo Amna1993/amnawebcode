@@ -3,12 +3,12 @@ import { FiUpload, FiMessageCircle, FiBell } from "react-icons/fi";
 import { BsFillBarChartFill } from "react-icons/bs";
 
 function ClientDashboard() {
-  const [progress, setProgress] = useState(60); // Simulated project progress
-  const [messages, setMessages] = useState([
+  const [progress] = useState(60); // Simulated project progress
+  const [messages] = useState([
     { id: 1, sender: "Admin", text: "Welcome to your dashboard!" },
     { id: 2, sender: "Admin", text: "Your project is in the design phase." },
   ]);
-  const [notifications, setNotifications] = useState([
+  const [notifications] = useState([
     "Design phase completed",
     "Development phase started",
   ]);

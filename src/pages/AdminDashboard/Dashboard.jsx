@@ -4,13 +4,13 @@ import {
   FiFolder,
   FiDollarSign,
   FiBell,
-  FiMessageCircle,
+ 
 } from "react-icons/fi";
 import { Bar, Pie } from "react-chartjs-2";
 import "chart.js/auto";
 
 function AdminDashboard() {
-  const [notifications, setNotifications] = useState([
+  const [notifications] = useState([
     "New client signed up: Cheeko",
     "Project 'E-commerce Website' moved to Development Phase",
     "Payment received: $1500 from Cheeko",

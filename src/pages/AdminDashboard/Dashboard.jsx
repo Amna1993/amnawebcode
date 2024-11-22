@@ -114,39 +114,41 @@ function AdminDashboard() {
         </ul>
       </div>
 
-      {/* Client Management */}
+      {/* Corrected Client Management */}
       <div className="bg-gray-800 shadow-md rounded-lg p-4 sm:p-6 mt-6">
         <h2 className="text-xl sm:text-2xl font-semibold text-green-400 mb-4">
           Active Clients
         </h2>
-        <table className="w-full border border-gray-600 text-left text-gray-300 text-sm sm:text-base">
-          <thead className="bg-gray-700 text-gray-400">
-            <tr>
-              <th className="p-3 border-b border-gray-600">Name</th>
-              <th className="p-3 border-b border-gray-600">Email</th>
-              <th className="p-3 border-b border-gray-600">Project</th>
-              <th className="p-3 border-b border-gray-600">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="hover:bg-gray-700">
-              <td className="p-3 border-b border-gray-600">John Doe</td>
-              <td className="p-3 border-b border-gray-600">john@example.com</td>
-              <td className="p-3 border-b border-gray-600">Business Website</td>
-              <td className="p-3 border-b border-gray-600 text-blue-400">
-                In Progress
-              </td>
-            </tr>
-            <tr className="hover:bg-gray-700">
-              <td className="p-3 border-b border-gray-600">Jane Smith</td>
-              <td className="p-3 border-b border-gray-600">jane@example.com</td>
-              <td className="p-3 border-b border-gray-600">E-commerce Website</td>
-              <td className="p-3 border-b border-gray-600 text-green-400">
-                Completed
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="w-full border border-gray-600 text-left text-gray-300 text-sm sm:text-base">
+            <thead className="bg-gray-700 text-gray-400">
+              <tr>
+                <th className="p-3 border-b border-gray-600">Name</th>
+                <th className="p-3 border-b border-gray-600">Email</th>
+                <th className="p-3 border-b border-gray-600">Project</th>
+                <th className="p-3 border-b border-gray-600">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="hover:bg-gray-700">
+                <td className="p-3 border-b border-gray-600">John Doe</td>
+                <td className="p-3 border-b border-gray-600">john@example.com</td>
+                <td className="p-3 border-b border-gray-600">Business Website</td>
+                <td className="p-3 border-b border-gray-600 text-blue-400">
+                  In Progress
+                </td>
+              </tr>
+              <tr className="hover:bg-gray-700">
+                <td className="p-3 border-b border-gray-600">Jane Smith</td>
+                <td className="p-3 border-b border-gray-600">jane@example.com</td>
+                <td className="p-3 border-b border-gray-600">E-commerce Website</td>
+                <td className="p-3 border-b border-gray-600 text-green-400">
+                  Completed
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
